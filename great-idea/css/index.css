@@ -3,187 +3,270 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-/* Global definitions */
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 .container {
-	width: 920px;
-	padding: 15px 50px;
-	margin: 0 auto;
-	line-height: 1.1;
-	color: gray;
-	font-size: 1.5rem;
+  width: 920px;
+  padding: 15px 50px;
+  margin: 0 auto;
+  line-height: 1.1;
+  color: gray;
+  font-size: 1.5rem;
 }
 
-h1, h2 {
-	color: black;
+h1,
+h2 {
+  color: black;
 }
 
 .box {
-	margin: 25px 0;
-	vertical-align: top;
+  margin: 25px 0;
+  vertical-align: top;
 }
 
-/* Menu bar */
 h1 {
-	font-size: 6.2rem;
-	text-align: center;
+  font-size: 6.2rem;
+  text-align: center;
 }
 
-.menu-box {
-	// width: 875px;
-	width: 100%;
-}
-
-nav, .logo, .innovation, .box {
-	display: inline-block;
+.menu-box,
+nav,
+.hero-box,
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
 }
 
 nav {
-	width: 625px;
-	vertical-align: top;
-	padding-top: 12px;
+  width: 675px;
+  max-width: 67%;
+  align-items: center;
 }
 
 nav a {
-	margin-left: 40px;
-	text-decoration: none;
-	color: lightgray;
-	font-size: 1.3rem;
-	padding: 3px 5px;
-	border: 1px solid transparent;
+  text-decoration: none;
+  color: lightgrey;
+  font-size: 13px;
+  border: 1px solid transparent;
 }
 
 nav a:hover {
-	color: black;
-	border: 1px solid black;
-}
-
-nav a:first-child {
-	margin-left: 0px;
+  font-weight: bold;
+  background: lavender;
+  color: black;
+  border: 1px solid black;
 }
 
 .logo {
-	vertical-align: top;
+  vertical-align: top;
 }
 
-/* Hero */
 .hero-box {
-	margin: 50px 0;
+  margin: 50px 0;
+  align-items: center;
 }
 
 .innovation {
-	width: 60%;
-	height: 200px;
-	margin-top: 40px;
-	text-align: center;
+  width: 60%;
+  text-align: center;
 }
 
 .hero-button {
-	padding: 7px 35px;
-	border: 1px solid gray;
-	background-color: white;
-	color: gray;
+  padding: 7px 35px;
+  border: 1px solid gray;
+  background-color: white;
+  color: gray;
 }
 
 .hero-button:hover {
-	border: 1px solid black;
+  border: 1px solid black;
 }
 
 .hero-img {
-	width: 39%;
-	display: inline-block;
-	vertical-align: top;
+  width: 39%;
+  height: auto;
+  vertical-align: top;
 }
 
 /* Midsection */
-.features, .about {
-	width: 49.5%;
+.features,
+.about {
+  width: 49.5%;
 }
 
-.services, .product, .vision {
-	width: 33%;
+.services,
+.product,
+.vision {
+  width: 33%;
 }
 
 .middle-img {
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 }
 
 /* Footer area */
 .contact p {
-	padding: 10px 0;
+  padding: 10px 0;
 }
 
 .copyright {
-	text-align: center;
-	padding: 0 0 10px;
+  text-align: center;
+  padding: 0 0 10px;
 }
 
 small {
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }
