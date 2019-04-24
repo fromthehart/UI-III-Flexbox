@@ -172,7 +172,8 @@ li {
 }
 
 .container {
-  width: 920px;
+	width: 100%;
+	max-width: 920px;
   padding: 15px 50px;
   margin: 0 auto;
   line-height: 1.1;
@@ -183,7 +184,6 @@ li {
 .box {
   margin: 25px 0;
   vertical-align: top;
-  min-width: 250px;
 }
 
 .shaded {
@@ -196,7 +196,6 @@ li {
 
 .half-box {
   width: 48%;
-  min-width: 350px;
 }
 
 .third-box {
@@ -239,7 +238,7 @@ nav a:hover {
   font-weight: bold;
   color: black;
   border-bottom: 1px solid black;
-  \border-top: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .logo {
@@ -309,6 +308,124 @@ small {
 }
 
 .services-header-img {
-	margin-top: 20px;
-	width: 100%;
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+
+	button {
+		display: block;
+		margin: 0 auto;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+
+	hr {
+		display: none;
+	}
+
+	p {
+		padding: 0 5%;
+		font-size: 1.8rem;
+		line-height: 1.6;
+	}
+
+	ul li {
+		text-align: center;
+	}
+
+	.container {
+		padding: 10px 0;
+		width: 100%;
+	}
+  .menu-box,
+  nav,
+  .hero-box,
+  section {
+    flex-direction: column;
+	}
+	
+	.menu-box, .hero-box {
+		flex-flow: column-reverse;
+	}
+
+  .box {
+		border-bottom: 0;
+		border-left: 0;
+		border-right: 0;
+		margin: 0;
+    width: 100%;
+	}
+	
+	.box:nth-child(even) {
+		background: white;
+	}
+
+	.services-page .box:last-child {
+		border-bottom: 1px solid grey;
+	}
+
+	.info {
+		padding: 25px;
+		background-color: lavender;
+	}
+	
+  .logo {
+    max-width: 100%;
+    margin: 0 auto;
+		align-items: center;
+	}
+
+  .logo img {
+    margin: 0 auto;
+  }
+
+  nav {
+		background: black;
+		border-bottom: 1px solid black;
+    margin: 10px 0 0px;
+    max-width: 100%;
+  }
+
+  nav a {
+		background: lavender;
+		color: black;
+		font-size: 1.8rem;
+		margin-top: 1px;
+		padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a:hover {
+		background: white;
+		border: 1px solid white;
+		color: black;
+  }
+
+  .hero-img {
+    margin-bottom: 30px;
+	}
+
+	.innovation {
+		width: 100%;
+	}
+
+	.innovation button {
+		font-size: 1.4rem;
+	}
+	
+	h2, .contact {
+		text-align: center;
+	}
+
+	.hero-img, .services-header-img, .middle-img, .services-info-img {
+		display: none;
+	}
+
+	.contact {
+		margin-top: 20px;
+	}
 }
