@@ -155,6 +155,26 @@ html {
   font-size: 62.5%;
 }
 
+h1,
+h2 {
+  color: black;
+}
+
+h1 {
+  font-size: 6.2rem;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+li {
+  list-style: square inside none;
+  display: list-item;
+  margin-top: 12px;
+}
+
 .container {
   width: 920px;
   padding: 15px 50px;
@@ -164,19 +184,35 @@ html {
   font-size: 1.5rem;
 }
 
-h1,
-h2 {
-  color: black;
-}
-
 .box {
   margin: 25px 0;
   vertical-align: top;
+  min-width: 250px;
 }
 
-h1 {
-  font-size: 6.2rem;
-  text-align: center;
+.shaded {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: lavender;
+  border: 1px solid grey;
+  color: black;
+}
+
+.half-box {
+  width: 48%;
+  min-width: 350px;
+}
+
+.third-box {
+  width: 30%;
+  min-width: 250px;
+}
+
+.box-btn {
+  padding: 5px 20px;
+  background: white;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .menu-box,
@@ -198,16 +234,16 @@ nav {
 nav a {
   text-decoration: none;
   color: lightgrey;
-	font-size: 13px;
-	padding: 5px 0;
+  font-size: 1.3rem;
+  padding: 5px 0;
   border: 1px solid transparent;
 }
 
 nav a:hover {
   font-weight: bold;
   color: black;
-	border-bottom: 1px solid black;\
-	border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  \border-top: 1px solid black;
 }
 
 .logo {
@@ -270,4 +306,9 @@ nav a:hover {
 
 small {
   font-size: 1.3rem;
+}
+
+.services-header-img {
+	margin-top: 20px;
+	width: 100%;
 }
